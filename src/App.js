@@ -74,14 +74,8 @@ function App() {
         }
       });
   }
-  return loggedIn ? (
-    <TodoList username={userName} logoutHandler={logoutHandler}/>
-  ) : (
-    <LoginForm
-      signupHandler={signupHandler}
-      loginHandler={loginHandler}
-      error={error}
-    />
+  return loggedIn ? ( <TodoList username={userName} logoutHandler={logoutHandler}/>
+  ) : (<LoginForm signupHandler={signupHandler} loginHandler={loginHandler} error={error}/>
   );
 }
 //App.listen(port, () => console.log(`App listening on port ${port}!`))
